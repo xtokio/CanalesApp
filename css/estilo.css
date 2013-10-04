@@ -1,0 +1,124 @@
+ul
+{
+    list-style-type:none;
+}
+.Server_Estatus ul li { display: inline; }
+
+.menu-link:hover
+{
+    text-decoration:none;
+    color:#ba0042;
+}
+.Canal
+{
+    cursor:pointer;
+    text-decoration:none;
+    color:#ffffff;
+}
+.wrapper-login
+{
+    width: 300px;
+    margin: 0 auto;
+}
+.wrapper-contenido
+{
+    position:relative;
+    width: 1300px;
+    margin: 0 auto;
+}
+.borde
+{
+    border:1px #3e4143 solid;
+}
+.fondo-gris
+{    
+    background-color: #3e4143;
+}
+.fondo-gris-oscuro
+{    
+    background-color: #2d2e30;
+}
+.float-left{
+    float:left;
+}
+.align-right{
+    text-align:right;
+}
+.display-none{
+    display:none;
+}
+.height6{
+    height:460px;
+}
+.span1 {
+  width: 60px;
+}
+.span2 {
+  width: 140px;
+}
+.span3 {
+  width: 220px;
+}
+.span4 {
+  width: 300px;
+}
+.span5 {
+  width: 380px;
+}
+.span6 {
+  width: 460px;
+}
+.span7 {
+  width: 540px;
+}
+.span8 {
+  width: 620px;
+}
+.span9 {
+  width: 700px;
+}
+.span10 {
+  width: 780px;
+}
+.span11 {
+  width: 860px;
+}
+.span12 {
+  width: 940px;
+}
+.offset1 {
+  margin-left: 80px;
+}
+.offset2 {
+  margin-left: 160px;
+}
+.offset3 {
+  margin-left: 240px;
+}
+.offset4 {
+  margin-left: 320px;
+}
+.offset5 {
+  margin-left: 400px;
+}
+.offset6 {
+  margin-left: 480px;
+}
+.offset7 {
+  margin-left: 560px;
+}
+.offset8 {
+  margin-left: 640px;
+}
+.offset9 {
+  margin-left: 720px;
+}
+.offset10 {
+  margin-left: 800px;
+}
+.offset11 {
+  margin-left: 880px;
+}
+.offset12 {
+  margin-left: 960px;
+}

@@ -1,0 +1,472 @@
+
+<div class="wrapper-contenido">
+    <a href="" id="Logout">Logout</a>
+    <br><br>
+    <span id="Span_Server_IDLE" class="label label-success" style="font-size:13px;padding:10px">Total IDLE: 0</span>
+    <span id="Span_Server_Activos" class="label label-primary" style="font-size:13px;padding:10px">Total Activos: 0</span>
+    <br><br>
+        <div id="Div_Canales">
+                <div class="row">
+                    <table>
+                        <tr>
+                            <td style="width:616px;padding-left:10px">                                
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <span class="label label-danger" style="font-size:13px;padding-top:15px">172.16.0.4</span>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="form-group input-group">
+                                                        <span class="input-group-addon">Ruta:</span>
+                                                        <input type="text" value="" class="form-control" id="txt_Ruta1">                       
+                                                    </div> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;">
+                                                    <span id="Span_Server1_CPU" style="color:#202020">CPU</span>
+                                                    <div id="Div_Server1_CPU" class="progress"></div>
+                                                </td>
+                                                <td style="width:160px;padding:0px 30px;">
+                                                    <span id="Span_Server1_RAM" style="color:#202020">RAM</span> 
+                                                    <div id="Div_Server1_RAM" class="progress"></div> 
+                                                </td>
+                                                <td style="width:130px;padding:0px 30px 0px 0px">
+                                                    <span id="Span_Server1_HDD" style="color:#202020">Disco Duro</span> 
+                                                    <div id="Div_Server1_HDD" class="progress"></div>
+                                                </td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="padding-bottom:10px">
+                                                    <button type="button" class="btn btn-primary" id="lnk_Dahdi1"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Reiniciar Dahdi</button>
+                                                    <span id="Span_Server1_IDLE" class="label label-success" style="font-size:13px;padding:10px">IDLE 0</span>
+                                                    <span id="Span_Server1_Activos" class="label label-primary" style="font-size:13px;padding:10px">Activos 0</span>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="Div_Span1" class="col-md-3"></div>
+                                </div>
+                            </td>
+                            <td style="width:616px">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <span class="label label-danger" style="font-size:13px;padding-top:15px">172.16.0.13</span>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="form-group input-group">
+                                                        <span class="input-group-addon">Ruta:</span>
+                                                        <input type="text" value="" class="form-control" id="txt_Ruta2">                       
+                                                    </div> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;">
+                                                    <span id="Span_Server2_CPU" style="color:#202020">CPU</span>
+                                                    <div id="Div_Server2_CPU" class="progress"></div>
+                                                </td>
+                                                <td style="width:160px;padding:0px 30px;">
+                                                    <span id="Span_Server2_RAM" style="color:#202020">RAM</span> 
+                                                    <div id="Div_Server2_RAM" class="progress"></div> 
+                                                </td>
+                                                <td style="width:130px;padding:0px 30px 0px 0px">
+                                                    <span id="Span_Server2_HDD" style="color:#202020">Disco Duro</span> 
+                                                    <div id="Div_Server2_HDD" class="progress"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="padding-bottom:10px">
+                                                    <button type="button" class="btn btn-primary" id="lnk_Dahdi2"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Reiniciar Dahdi</button>
+                                                    <span id="Span_Server2_IDLE" class="label label-success" style="font-size:13px;padding:10px">IDLE 0</span>
+                                                    <span id="Span_Server2_Activos" class="label label-primary" style="font-size:13px;padding:10px">Activos 0</span>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="Div_Span2" class="col-md-3"></div>
+                                </div>
+                            </td>
+                            <td style="width:616px">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <span class="label label-danger" style="font-size:13px;padding-top:15px">172.16.0.21</span>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="form-group input-group">
+                                                        <span class="input-group-addon">Ruta:</span>
+                                                        <input type="text" value="" class="form-control" id="txt_Ruta3">                       
+                                                    </div> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;">
+                                                    <span id="Span_Server3_CPU" style="color:#202020">CPU</span>
+                                                    <div id="Div_Server3_CPU" class="progress"></div>
+                                                </td>
+                                                <td style="width:160px;padding:0px 30px;">
+                                                    <span id="Span_Server3_RAM" style="color:#202020">RAM</span> 
+                                                    <div id="Div_Server3_RAM" class="progress"></div> 
+                                                </td>
+                                                <td style="width:130px;padding:0px 30px 0px 0px">
+                                                    <span id="Span_Server3_HDD" style="color:#202020">Disco Duro</span> 
+                                                    <div id="Div_Server3_HDD" class="progress"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="padding-bottom:10px">
+                                                    <button type="button" class="btn btn-primary" id="lnk_Dahdi3"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Reiniciar Dahdi</button>
+                                                    <span id="Span_Server3_IDLE" class="label label-success" style="font-size:13px;padding:10px">IDLE 0</span>
+                                                    <span id="Span_Server3_Activos" class="label label-primary" style="font-size:13px;padding:10px">Activos 0</span>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="Div_Span3" class="col-md-3"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        
+    <div id="Div_Servidor_Estatus"></div>
+</div>
+
+<script>
+    $('#Logout').html('Logout - '+$.cookie('Usuario'));
+    //Listar Rutas
+    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
+        $('#txt_Ruta1').val(data);
+    });
+    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
+        $('#txt_Ruta2').val(data);
+    });
+    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.21'},function(data){
+        $('#txt_Ruta3').val(data);
+    });
+    
+    $('#txt_Ruta1').blur(function(){
+        var _Ruta = $('#txt_Ruta1').val();
+        var _Servidor = '172.16.0.4';
+        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+            alert(data);
+        });
+    });
+    
+    $('#txt_Ruta2').blur(function(){
+        var _Ruta = $('#txt_Ruta2').val();
+        var _Servidor = '172.16.0.13';
+        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+            alert(data);
+        });
+    });
+    
+    $('#txt_Ruta3').blur(function(){
+        var _Ruta = $('#txt_Ruta3').val();
+        var _Servidor = '172.16.0.21';
+        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+            alert(data);
+        });
+    });
+    
+    function Total_IDLE()
+    {
+        var IDLE1 = $('#Span_Server1_IDLE').html().split(' ')[1];
+        var IDLE2 = $('#Span_Server2_IDLE').html().split(' ')[1];
+        var IDLE3 = $('#Span_Server3_IDLE').html().split(' ')[1];
+        
+        var Total_IDLE = parseInt(IDLE1)+parseInt(IDLE2)+parseInt(IDLE3);
+        $('#Span_Server_IDLE').html('TOTAL IDLE: '+Total_IDLE);
+    }
+    
+    function Total_Activos()
+    {
+        var Activos1 = $('#Span_Server1_Activos').html().split(' ')[1];
+        var Activos2 = $('#Span_Server2_Activos').html().split(' ')[1];
+        var Activos3 = $('#Span_Server3_Activos').html().split(' ')[1];
+        
+        var Total_Activos = parseInt(Activos1)+parseInt(Activos2)+parseInt(Activos3);
+        $('#Span_Server_Activos').html('TOTAL Activos: '+Total_Activos);
+    }
+    setInterval(function(){
+        
+        //IDLE
+        $.post('php/Servidores.php',{Accion:'Canales_IDLE'},function(data){
+            $('#Span_Server1_IDLE').html('IDLE '+data.split(':')[0]);
+            $('#Span_Server1_Activos').html('Activos '+data.split(':')[1]);
+        });
+        
+        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
+            $('#Span_Server2_IDLE').html('IDLE '+data.message.split(':')[0]);
+            $('#Span_Server2_Activos').html('Activos '+data.message.split(':')[1]);
+        });
+        
+        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
+            $('#Span_Server3_IDLE').html('IDLE '+data.message.split(':')[0]);
+            $('#Span_Server3_Activos').html('Activos '+data.message.split(':')[1]);
+        });
+        
+        Total_IDLE();
+        Total_Activos();
+        
+        //Porcentaje Estatus Server
+        $.post('php/Servidores.php',{Accion:'Servidor_Estatus',Tipo:'CPU'},function(data){
+            $('#Div_Server1_CPU').html(data);
+            var _Porcentaje = $('#Div_Server1_CPU div').attr('style').split(':');            
+            $('#Span_Server1_CPU').html('CPU '+_Porcentaje[1]);
+        });
+        
+        $.post('php/Servidores.php',{Accion:'Servidor_Estatus',Tipo:'RAM'},function(data){
+            $('#Div_Server1_RAM').html(data);
+            var _Porcentaje = $('#Div_Server1_RAM div').attr('style').split(':');            
+            $('#Span_Server1_RAM').html('RAM '+_Porcentaje[1]);
+        });
+        
+        $.post('php/Servidores.php',{Accion:'Servidor_Estatus',Tipo:'HDD'},function(data){
+            $('#Div_Server1_HDD').html(data);
+            var _Porcentaje = $('#Div_Server1_HDD div').attr('style').split(':');            
+            $('#Span_Server1_HDD').html('HDD '+_Porcentaje[1]);
+        });
+          
+        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=CPU&callback=?',function(data){
+            $('#Div_Server2_CPU').html(data.message);
+            var _Porcentaje = $('#Div_Server2_CPU div').attr('style').split(':');            
+            $('#Span_Server2_CPU').html('CPU '+_Porcentaje[1]);
+        });
+        
+        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=RAM&callback=?',function(data){
+            $('#Div_Server2_RAM').html(data.message);
+            var _Porcentaje = $('#Div_Server2_RAM div').attr('style').split(':');            
+            $('#Span_Server2_RAM').html('RAM '+_Porcentaje[1]);
+        });
+        
+        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=HDD&callback=?',function(data){
+            $('#Div_Server2_HDD').html(data.message);
+            var _Porcentaje = $('#Div_Server2_HDD div').attr('style').split(':');            
+            $('#Span_Server2_HDD').html('HDD '+_Porcentaje[1]);
+        });
+            
+        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=CPU&callback=?',function(data){
+            $('#Div_Server3_CPU').html(data.message);
+            var _Porcentaje = $('#Div_Server3_CPU div').attr('style').split(':');            
+            $('#Span_Server3_CPU').html('CPU '+_Porcentaje[1]);
+        });
+        
+        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=RAM&callback=?',function(data){
+            $('#Div_Server3_RAM').html(data.message);
+            var _Porcentaje = $('#Div_Server3_RAM div').attr('style').split(':');            
+            $('#Span_Server3_RAM').html('RAM '+_Porcentaje[1]);
+        });
+        
+        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=HDD&callback=?',function(data){
+            $('#Div_Server3_HDD').html(data.message);
+            var _Porcentaje = $('#Div_Server3_HDD div').attr('style').split(':');            
+            $('#Span_Server3_HDD').html('HDD '+_Porcentaje[1]);
+        });
+        
+        //Canales
+        $.post('php/Servidores.php',{Accion:'Servidor'},function(data){
+            $('#Div_Span1').html(data);
+            
+            $('.Canal').click(function(){
+                var _Canal = $(this).text();
+                
+                $('#Modal_Canal').modal('show');
+                $('#Span_Canal').text(_Canal);
+                $('#btn_Reiniciar_Canal').click(function(){
+                    $.post('php/Servidores.php',{Accion:'Reiniciar_Canal',Canal:_Canal},function(data){
+                        $('#Modal_Canal').modal('hide');
+                    });
+                });                
+            });
+        });
+            
+        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Servidor&callback=?',function(data){
+            $('#Div_Span2').html(data.message);
+            
+            $('.Canal').click(function(){
+                var _Canal = $(this).text();
+                
+                $('#Modal_Canal').modal('show');
+                $('#Span_Canal').text(_Canal);
+                $('#btn_Reiniciar_Canal').click(function(){
+                    $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Reiniciar_Canal&Canal='+_Canal+'&callback=?',function(data){
+                        $('#Modal_Canal').modal('hide');
+                    });                    
+                });                
+            });
+        });
+            
+        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Servidor&callback=?',function(data){
+            $('#Div_Span3').html(data.message);
+            
+            $('.Canal').click(function(){
+                var _Canal = $(this).text();
+                
+                $('#Modal_Canal').modal('show');
+                $('#Span_Canal').text(_Canal);
+                $('#btn_Reiniciar_Canal').click(function(){
+                    $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Reiniciar_Canal&Canal='+_Canal+'&callback=?',function(data){
+                        $('#Modal_Canal').modal('hide');
+                    });                    
+                });                
+            });
+        });
+            
+    },3000);
+    
+    $('#Logout').click(function(event){
+        event.preventDefault();
+        $.post('php/Login.php',{Accion:'Logout'},function(){
+            location.reload();
+        });
+    });
+    
+    //Reiniciar Dahdi    
+    $('#lnk_Dahdi1').click(function(){
+        $('#Modal').modal('show');
+        $('#btn_Aceptar').click(function(){
+            $('#Div_Auth').removeClass('display-none');
+            $('#btn_Aceptar').addClass('display-none');
+            $('#btn_Reiniciar').removeClass('display-none').click(function()
+            {
+                if($('#txt_Auth_Password').val()!='')
+                {
+                    $.post('php/Servidores.php',{Accion:'Validar_Password',Password:$('#txt_Auth_Password').val()},function(data){
+                        
+                        if(data == "1")
+                        {
+                            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.4',Canales:$('#Span_Server1_Activos').html().split(' ')[1],Estatus:'Enviar'},function(){ });
+                            $('#Div_Auth').addClass('display-none');
+                            $('#Modal_Mensaje').html('Reiniciando Dahdi en:');
+                            $('#counter').removeClass('display-none');
+                            $('#counter').countdown({
+                              image: 'img/digits.png',
+                              startTime: '01:00',
+                              timerEnd: function(){ $.post('php/Servidores.php',{Accion:'Reiniciar_Dahdi'},function(data){alert(data);}); },
+                              format: 'mm:ss'
+                            });
+                        }
+                        else
+                            alert('Password incorrecto');
+                        
+                    });
+                    
+                }
+                else
+                    alert('Password vacio');
+            });            
+            
+        });
+        
+        $('#btn_Cerrar').click(function(){
+            $('#counter').countdown('pause');
+            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.4',Canales:$('#Span_Server1_Activos').html().split(' ')[1],Estatus:'Cancelar'},function(){ 
+                location.reload(true);
+            });
+            
+        });
+    });
+    
+    $('#lnk_Dahdi2').click(function(){
+        $('#Modal').modal('show');
+        $('#btn_Aceptar').click(function(){
+            $('#Div_Auth').removeClass('display-none');
+            $('#btn_Aceptar').addClass('display-none');
+            $('#btn_Reiniciar').removeClass('display-none').click(function()
+            {
+                if($('#txt_Auth_Password').val()!='')
+                {
+                    $.post('php/Servidores.php',{Accion:'Validar_Password',Password:$('#txt_Auth_Password').val()},function(data){
+                        
+                        if(data == "1")
+                        {
+                            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.13',Canales:$('#Span_Server2_Activos').html().split(' ')[1],Estatus:'Enviar'},function(){ });
+                            $('#Div_Auth').addClass('display-none');
+                            $('#Modal_Mensaje').html('Reiniciando Dahdi en:');
+                            $('#counter').removeClass('display-none');
+                            $('#counter').countdown({
+                              image: 'img/digits.png',
+                              startTime: '01:00',
+                              timerEnd: function(){ $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Reiniciar_Dahdi&callback=?',function(data){alert(data.message);}); },
+                              format: 'mm:ss'
+                            });
+                        }
+                        else
+                            alert('Password incorrecto');
+                        
+                    });
+                    
+                }
+                else
+                    alert('Password vacio');
+            });            
+            
+        });
+        
+        $('#btn_Cerrar').click(function(){
+            $('#counter').countdown('pause');
+            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.13',Canales:$('#Span_Server2_Activos').html().split(' ')[1],Estatus:'Cancelar'},function(){ 
+                location.reload(true);
+            });
+            
+        });
+    });
+    
+    $('#lnk_Dahdi3').click(function(){
+        $('#Modal').modal('show');
+        $('#btn_Aceptar').click(function(){
+            $('#Div_Auth').removeClass('display-none');
+            $('#btn_Aceptar').addClass('display-none');
+            $('#btn_Reiniciar').removeClass('display-none').click(function()
+            {
+                if($('#txt_Auth_Password').val()!='')
+                {
+                    $.post('php/Servidores.php',{Accion:'Validar_Password',Password:$('#txt_Auth_Password').val()},function(data){
+                        
+                        if(data == "1")
+                        {
+                            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.21',Canales:$('#Span_Server3_Activos').html().split(' ')[1],Estatus:'Enviar'},function(){ });
+                            $('#Div_Auth').addClass('display-none');
+                            $('#Modal_Mensaje').html('Reiniciando Dahdi en:');
+                            $('#counter').removeClass('display-none');
+                            $('#counter').countdown({
+                              image: 'img/digits.png',
+                              startTime: '01:00',
+                              timerEnd: function(){ $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Reiniciar_Dahdi&callback=?',function(data){alert(data.message);}); },
+                              format: 'mm:ss'
+                            });
+                        }
+                        else
+                            alert('Password incorrecto');
+                        
+                    });
+                    
+                }
+                else
+                    alert('Password vacio');
+            });            
+            
+        });
+        
+        $('#btn_Cerrar').click(function(){
+            $('#counter').countdown('pause');
+            $.post('php/Mail/EnviarMail.php',{EnviarMail:'EnviarMail',Servidor:'172.16.0.21',Canales:$('#Span_Server3_Activos').html().split(' ')[1],Estatus:'Cancelar'},function(){ 
+                location.reload(true);
+            });
+            
+        });
+    });
+        
+</script>
