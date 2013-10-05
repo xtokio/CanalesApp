@@ -146,20 +146,20 @@
 <script>
     $('#Logout').html('Logout - '+$.cookie('Usuario'));
     //Listar Rutas
-    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
+    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
         $('#txt_Ruta1').val(data);
     });
-    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
+    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
         $('#txt_Ruta2').val(data);
     });
-    $.post('php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.21'},function(data){
+    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.21'},function(data){
         $('#txt_Ruta3').val(data);
     });
     
     $('#txt_Ruta1').blur(function(){
         var _Ruta = $('#txt_Ruta1').val();
         var _Servidor = '172.16.0.4';
-        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });

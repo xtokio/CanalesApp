@@ -44,11 +44,6 @@ function Login()
         }
         if (count($rows) > 0)
         {
-            session_start();
-            $_SESSION['iUsuario'] = $rows[0]['iUsuario'];
-            $_SESSION['Usuario'] = $rows[0]['Usuario'];
-            $_SESSION['Nombre'] = $rows[0]['Nombre'];
-            $_SESSION['Apellidos'] = $rows[0]['Apellidos'];
             return "success";
         } 
         else 

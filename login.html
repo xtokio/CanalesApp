@@ -43,12 +43,11 @@
             {
                 if(Password.length > 0)
                 {
-                    $.post('php/Login.php',{Accion:'Login',Usuario:Usuario,Password:Password},function(data){
+                    $.post('172.16.0.4/CanalesApp/php/Login.php',{Accion:'Login',Usuario:Usuario,Password:Password},function(data){
                         
                         if(data == 'success')
                         {
-                            location.reload();
-                            //$('#Div_Contenido').load('servidores.html');
+                            $('#Div_Contenido').load('servidores.html');
                         }
                         else
                         {
