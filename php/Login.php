@@ -7,7 +7,7 @@ ini_set('display_startup_errors', TRUE);
 
 $Regresa = "";
 
-$Accion = $_POST['Accion'];
+$Accion = $_GET['Accion'];
 
 switch($Accion)
 {
@@ -15,13 +15,14 @@ switch($Accion)
     case "Logout":$Regresa = Logout();break;
 }
 
-echo $Regresa;
+$ObjetoJSON->message = $Regresa;
+echo $_GET['callback']. '('. json_encode($ObjetoJSON) . ')';
 
 // Funcion que nos regresa todos los usuarios
 function Login() 
 {
     // Se verifica que el usuario exista en la base de datos
-    $Query = "SELECT COUNT(iUsuario) AS Total FROM usuarios WHERE Usuario = '" . $_POST['Usuario'] . "'";
+    $Query = "SELECT COUNT(iUsuario) AS Total FROM usuarios WHERE Usuario = '" . $_GET['Usuario'] . "'";
     $Lector = Ejecuta_Query($Query);
 
     $rows = array();
@@ -34,7 +35,7 @@ function Login()
     if ($rows[0] > '0') 
     {
         // Se crea el query para leer al usuario de la base de datos
-        $Query = "SELECT * FROM usuarios WHERE Usuario = '".$_POST['Usuario']."' AND Password = '" .$_POST['Password']."' LIMIT 1";
+        $Query = "SELECT * FROM usuarios WHERE Usuario = '".$_GET['Usuario']."' AND Password = '" .$_GET['Password']."' LIMIT 1";
         $Lector = Ejecuta_Query($Query);
         $rows = array();
 

@@ -43,15 +43,15 @@
             {
                 if(Password.length > 0)
                 {
-                    $.post('172.16.0.4/CanalesApp/php/Login.php',{Accion:'Login',Usuario:Usuario,Password:Password},function(data){
+                    $.getJSON('http://172.16.0.4/CanalesApp/php/Login.php?Accion=Login&Usuario='+Usuario+'&Password='+Password+'&callback=?',function(data){
                         
-                        if(data == 'success')
+                        if(data.message == 'success')
                         {
                             $('#Div_Contenido').load('servidores.html');
                         }
                         else
                         {
-                            $('#Modal_Mensaje').text(data);
+                            $('#Modal_Mensaje').text(data.message);
                             $('#Modal').modal('show');
                         }
                     });
