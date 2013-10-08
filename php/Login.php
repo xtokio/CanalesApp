@@ -73,7 +73,7 @@ function Logout()
 // Funcion que regresa query de la base de datos
 function Ejecuta_Query ($Query)
 {
-    $Conexion = mysql_connect("localhost","root","fk2013") or die ("Error de Conexion: ".mysql_error());
+    $Conexion = mysql_connect("localhost","root","root22") or die ("Error de Conexion: ".mysql_error());
     mysql_select_db("canales");
     $result= mysql_query($Query,$Conexion);
 

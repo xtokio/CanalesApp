@@ -43,7 +43,7 @@
             {
                 if(Password.length > 0)
                 {
-                    $.getJSON('http://172.16.0.4/CanalesApp/php/Login.php?Accion=Login&Usuario='+Usuario+'&Password='+Password+'&callback=?',function(data){
+                    $.getJSON('http://172.16.0.22/CanalesApp/php/Login.php?Accion=Login&Usuario='+Usuario+'&Password='+Password+'&callback=?',function(data){
                         
                         if(data.message == 'success')
                         {

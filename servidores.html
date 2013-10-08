@@ -146,7 +146,7 @@
 <script>
     $('#Logout').html('Logout - '+$.cookie('Usuario'));
     //Listar Rutas
-    $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
+    $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.22'},function(data){
         $('#txt_Ruta1').val(data);
     });
     $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
@@ -223,19 +223,19 @@
         //Porcentaje Estatus Server
         $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=CPU&callback=?',function(data){
             $('#Div_Server1_CPU').html(data.message);
-            var _Porcentaje = $('#Div_Server2_CPU div').attr('style').split(':');            
+            var _Porcentaje = $('#Div_Server1_CPU div').attr('style').split(':');            
             $('#Span_Server1_CPU').html('CPU '+_Porcentaje[1]);
         });
         
         $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=RAM&callback=?',function(data){
             $('#Div_Server1_RAM').html(data.message);
-            var _Porcentaje = $('#Div_Server2_RAM div').attr('style').split(':');            
+            var _Porcentaje = $('#Div_Server1_RAM div').attr('style').split(':');            
             $('#Span_Server1_RAM').html('RAM '+_Porcentaje[1]);
         });
         
         $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=HDD&callback=?',function(data){
             $('#Div_Server1_HDD').html(data.message);
-            var _Porcentaje = $('#Div_Server2_HDD div').attr('style').split(':');            
+            var _Porcentaje = $('#Div_Server1_HDD div').attr('style').split(':');            
             $('#Span_Server1_HDD').html('HDD '+_Porcentaje[1]);
         });
         
@@ -275,54 +275,6 @@
             $('#Span_Server3_HDD').html('HDD '+_Porcentaje[1]);
         });
         
-        //Canales
-        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Servidor&callback=?',function(data){
-            $('#Div_Span1').html(data);
-            
-            $('.Canal').click(function(){
-                var _Canal = $(this).text();
-                
-                $('#Modal_Canal').modal('show');
-                $('#Span_Canal').text(_Canal);
-                $('#btn_Reiniciar_Canal').click(function(){
-                    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Reiniciar_Canal',Canal:_Canal},function(data){
-                        $('#Modal_Canal').modal('hide');
-                    });
-                });                
-            });
-        });
-            
-        $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Servidor&callback=?',function(data){
-            $('#Div_Span2').html(data.message);
-            
-            $('.Canal').click(function(){
-                var _Canal = $(this).text();
-                
-                $('#Modal_Canal').modal('show');
-                $('#Span_Canal').text(_Canal);
-                $('#btn_Reiniciar_Canal').click(function(){
-                    $.getJSON('http://172.16.0.13/Server/Estatus.php?Accion=Reiniciar_Canal&Canal='+_Canal+'&callback=?',function(data){
-                        $('#Modal_Canal').modal('hide');
-                    });                    
-                });                
-            });
-        });
-            
-        $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Servidor&callback=?',function(data){
-            $('#Div_Span3').html(data.message);
-            
-            $('.Canal').click(function(){
-                var _Canal = $(this).text();
-                
-                $('#Modal_Canal').modal('show');
-                $('#Span_Canal').text(_Canal);
-                $('#btn_Reiniciar_Canal').click(function(){
-                    $.getJSON('http://172.16.0.21/Server/Estatus.php?Accion=Reiniciar_Canal&Canal='+_Canal+'&callback=?',function(data){
-                        $('#Modal_Canal').modal('hide');
-                    });                    
-                });                
-            });
-        });
             
     },3000);
     
