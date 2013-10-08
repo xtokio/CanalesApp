@@ -146,20 +146,20 @@
 <script>
     $('#Logout').html('Logout - '+$.cookie('Usuario'));
     //Listar Rutas
-    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
+    $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.4'},function(data){
         $('#txt_Ruta1').val(data);
     });
-    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
+    $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.13'},function(data){
         $('#txt_Ruta2').val(data);
     });
-    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.21'},function(data){
+    $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas_Listar',Servidor:'172.16.0.21'},function(data){
         $('#txt_Ruta3').val(data);
     });
     
     $('#txt_Ruta1').blur(function(){
         var _Ruta = $('#txt_Ruta1').val();
-        var _Servidor = '172.16.0.4';
-        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        var _Servidor = '172.16.0.22';
+        $.post('http://172.16.0.22/Canales/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });
@@ -167,7 +167,7 @@
     $('#txt_Ruta2').blur(function(){
         var _Ruta = $('#txt_Ruta2').val();
         var _Servidor = '172.16.0.13';
-        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        $.post('http://172.16.0.4/Canales/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });
@@ -175,7 +175,7 @@
     $('#txt_Ruta3').blur(function(){
         var _Ruta = $('#txt_Ruta3').val();
         var _Servidor = '172.16.0.21';
-        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        $.post('http://172.16.0.4/Canales/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });
@@ -202,7 +202,7 @@
     setInterval(function(){
         
         //IDLE
-        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
+        $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
             $('#Span_Server1_IDLE').html('IDLE '+data.message.split(':')[0]);
             $('#Span_Server1_Activos').html('Activos '+data.message.split(':')[1]);
         });
@@ -221,19 +221,19 @@
         Total_Activos();
         
         //Porcentaje Estatus Server
-        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Servidor_Estatus&Tipo=CPU&callback=?',function(data){
+        $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=CPU&callback=?',function(data){
             $('#Div_Server1_CPU').html(data.message);
             var _Porcentaje = $('#Div_Server2_CPU div').attr('style').split(':');            
             $('#Span_Server1_CPU').html('CPU '+_Porcentaje[1]);
         });
         
-        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Servidor_Estatus&Tipo=RAM&callback=?',function(data){
+        $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=RAM&callback=?',function(data){
             $('#Div_Server1_RAM').html(data.message);
             var _Porcentaje = $('#Div_Server2_RAM div').attr('style').split(':');            
             $('#Span_Server1_RAM').html('RAM '+_Porcentaje[1]);
         });
         
-        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Servidor_Estatus&Tipo=HDD&callback=?',function(data){
+        $.getJSON('http://172.16.0.22/Server/Estatus.php?Accion=Servidor_Estatus&Tipo=HDD&callback=?',function(data){
             $('#Div_Server1_HDD').html(data.message);
             var _Porcentaje = $('#Div_Server2_HDD div').attr('style').split(':');            
             $('#Span_Server1_HDD').html('HDD '+_Porcentaje[1]);
