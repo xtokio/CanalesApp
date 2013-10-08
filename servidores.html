@@ -167,7 +167,7 @@
     $('#txt_Ruta2').blur(function(){
         var _Ruta = $('#txt_Ruta2').val();
         var _Servidor = '172.16.0.13';
-        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });
@@ -175,7 +175,7 @@
     $('#txt_Ruta3').blur(function(){
         var _Ruta = $('#txt_Ruta3').val();
         var _Servidor = '172.16.0.21';
-        $.post('php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
+        $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Rutas',Ruta:_Ruta,Servidor:_Servidor},function(){
             alert(data);
         });
     });
@@ -202,7 +202,7 @@
     setInterval(function(){
         
         //IDLE
-        $.getJSON('http://172.16.0.4/Server/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
+        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Canales_IDLE&callback=?',function(data){
             $('#Span_Server1_IDLE').html('IDLE '+data.message.split(':')[0]);
             $('#Span_Server1_Activos').html('Activos '+data.message.split(':')[1]);
         });
@@ -276,7 +276,7 @@
         });
         
         //Canales
-        $.post('php/Servidores.php',{Accion:'Servidor'},function(data){
+        $.getJSON('http://172.16.0.4/CanalesApp/php/Estatus.php?Accion=Servidor&callback=?',function(data){
             $('#Div_Span1').html(data);
             
             $('.Canal').click(function(){
@@ -285,7 +285,7 @@
                 $('#Modal_Canal').modal('show');
                 $('#Span_Canal').text(_Canal);
                 $('#btn_Reiniciar_Canal').click(function(){
-                    $.post('php/Servidores.php',{Accion:'Reiniciar_Canal',Canal:_Canal},function(data){
+                    $.post('http://172.16.0.4/CanalesApp/php/Servidores.php',{Accion:'Reiniciar_Canal',Canal:_Canal},function(data){
                         $('#Modal_Canal').modal('hide');
                     });
                 });                

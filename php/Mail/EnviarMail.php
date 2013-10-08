@@ -31,7 +31,7 @@ if(isset($_POST['EnviarMail']))
 	if($Estatus == "Enviar")
 	{
 		$Subject = 'Reinicio de servicio DAHDI';
-		$Body = "<strong>".$Supervisor.": </strong>reiniciara servicio DAHDI de Servidor <strong>".$Servidor."</strong> en 5 min.<br><br>Canales Activos: <strong>".$Canales."</strong>";
+		$Body = "<strong>".$Supervisor.": </strong>reiniciara servicio DAHDI de Servidor <strong>".$Servidor."</strong> en 10 segundos.<br><br>Canales Activos: <strong>".$Canales."</strong>";
 		$Evento = $Supervisor.": Reiniciara servicio DAHDI de Servidor ".$Servidor;
 	}
 	else 
@@ -69,8 +69,8 @@ if(isset($_POST['EnviarMail']))
 	$mail->MsgHTML($Body);
 	
 	$mail->AddAddress($MailDestino, "Luis Gomez");
-	//$mail->AddAddress("mcuevas@firstKontact.com","Magaly Cuevas");
-	//$mail->AddAddress("ihernandez@firstkontact.com", "Ivan Hernandez");
+	$mail->AddAddress("jgutierrez@firstKontact.com","Juan Gutierrez");
+	$mail->AddAddress("iramirez@firstkontact.com", "Ivan Ramirez");
 	
 	if(!$mail->Send()) 
 	{

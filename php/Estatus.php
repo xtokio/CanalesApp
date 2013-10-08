@@ -165,7 +165,7 @@
 		/* Detalles de Conexion */
 		$manager_host = "127.0.0.1";
 		$manager_user = "admin";
-		$manager_pass = "fk2012";
+		$manager_pass = "fk2013";
 		
 		/* Puerto Default */
 		$manager_port = "5038";
